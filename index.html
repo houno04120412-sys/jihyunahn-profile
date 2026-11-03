@@ -598,6 +598,18 @@
     from{ transform:scale(1.02); }
     to{ transform:scale(1.14); }
   }
+  @keyframes hero-appear{
+    from{ opacity:0; filter:blur(20px); transform:translateY(16px) scale(1.03); }
+    to{ opacity:1; filter:blur(0); transform:translateY(0) scale(1); }
+  }
+  .hero-title{ animation:hero-appear 1.9s var(--ease) both; }
+  .hero-eyebrow, .hero-title-sub, .hero-sub, .hero-bottom-row{
+    animation:hero-appear 1.6s var(--ease) both;
+  }
+  .hero-eyebrow{ animation-delay:.35s; }
+  .hero-title-sub{ animation-delay:.5s; }
+  .hero-sub{ animation-delay:.65s; }
+  .hero-bottom-row{ animation-delay:.8s; }
   .hero-title-sub{
     margin-top:18px; font-family:'Archivo',sans-serif;
     font-size:clamp(12px,1.3vw,15px); font-weight:400; letter-spacing:0.16em;
@@ -607,6 +619,7 @@
   a.sound-toggle{ text-decoration:none; }
   @media (prefers-reduced-motion:reduce){
     .hero-bg{ animation:none; transform:scale(1.02); }
+    .hero-title, .hero-eyebrow, .hero-title-sub, .hero-sub, .hero-bottom-row{ animation:none; }
   }
 </style>
 
@@ -616,14 +629,14 @@
   <div class="hero-dots"></div>
   <div class="hero-veil"></div>
   <div class="hero-content">
-    <div class="hero-eyebrow reveal in">PROFILE — INTERNAL MEDICINE</div>
-    <h1 class="hero-title reveal in d1">안<span class="thin">지</span>현</h1>
-    <p class="hero-title-sub reveal in d1">내과 전문의 · Jihyun Ahn, MD, PhD</p>
-    <p class="hero-sub reveal in d2">
+    <div class="hero-eyebrow">PROFILE — INTERNAL MEDICINE</div>
+    <h1 class="hero-title">안<span class="thin">지</span>현</h1>
+    <p class="hero-title-sub">내과 전문의 · Jihyun Ahn, MD, PhD</p>
+    <p class="hero-sub">
       내과 전문의·의학박사. 내분비대사·검진의학·노인의학을 바탕으로 의료 AI와 의학 교육, 쉬운 건강 커뮤니케이션을 연구합니다.<br>
       KMI 한국의학연구소
     </p>
-    <div class="hero-bottom-row reveal in d2">
+    <div class="hero-bottom-row">
       <div class="scrollcue"><div class="scrollcue-line"></div>SCROLL</div>
       <div class="hero-actions">
         <a class="sound-toggle" href="#publications"><span class="dot"></span>PUBLICATIONS</a>

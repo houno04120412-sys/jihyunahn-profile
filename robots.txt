@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://houno04120412-sys.github.io/jihyunahn-profile/sitemap.xml
